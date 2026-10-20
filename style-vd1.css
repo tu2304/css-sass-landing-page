@@ -1,0 +1,24 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px; /* Khoảng cách hàng ở phần tử cha */
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px dashed #999;
+}
+
+.child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: inherit; /* Kế thừa giá trị khoảng cách 30px từ phần tử cha */
+    grid-column: span 2;
+}
+
+.child div {
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
